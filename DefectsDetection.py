@@ -7,13 +7,13 @@ import darknet as dnet
 
 
 # Load Yolo
-net = cv2.dnn.readNet("yolov3_custom_final.weights", "yolov3_custom.cfg")
+net = cv2.dnn.readNet("weights/yolov3_custom_final.weights", "cfg_files/yolov3_custom.cfg")
 
 # Name custom object
 classes = ['Pothole', 'Longitudinal Crack', 'Transverse Crack', 'Alligator Crack']
 
 # Images path
-images_path = glob.glob(r"test_images/*.jpg")
+images_path = glob.glob(r"test_data/*.jpg")
 
 
 layer_names = net.getLayerNames()

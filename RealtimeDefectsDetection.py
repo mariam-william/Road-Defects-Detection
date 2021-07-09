@@ -7,12 +7,13 @@ import darknet as dnet
 import time
 
 # Load Yolo
-net = cv2.dnn.readNet("yolov3_custom_final.weights", "yolov3_custom.cfg")
+net = cv2.dnn.readNet("weights/yolov3_custom_final.weights", "cfg_files/yolov3_custom.cfg")
+#net = cv2.dnn.readNet("yolov3-tiny.weights", "yolov3_tiny_custom.cfg")
 
 # Name custom object
 classes = ['Pothole', 'Longitudinal Crack', 'Transverse Crack', 'Alligator Crack']
 
-cap = cv2.VideoCapture("video3.mp4")
+cap = cv2.VideoCapture("test_data/video3.mp4")
 # cap = 'test_images/<your_test_image>.jpg'
 
 font = cv2.FONT_HERSHEY_PLAIN
